@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Dropdowns Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+            width: 100%;
+        }
+
+        h1 {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: #333;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #666;
+            text-align: left;
+        }
+
+        select {
+            padding: 12px 20px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            width: 100%;
+
+        }
+
+        select:hover {
+            background-color: #eaeaea;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            min-height: 100px;
+            overflow: auto;
+            text-align: left;
+        }
+
+        #result pre {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="telelogo.png" alt="Logo de Tele" width="50%" height="50%">
+         <h1>Gestión de Cámaras</h2>
+        <h2>Cámara 1:</h1>
+        <select id="dropdown1">
+            <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM1&Value=1,57d45e73-42f0-4236-bfb5-7fb3edbbedb0">PLAZA</option>
+            <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM1&Value=1,fe5714fb-85d0-459b-a23a-258051d79d17">ESCUELA</option>
+            <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM1&Value=1,a5a53209-e52d-4b88-992d-a3cbaf49e8ca">MUNI</option>
+            <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM1&Value=1,6211ee91-2674-44bc-8b2e-36b6b8489404">CARTEL</option>
+        </select>
+
+        <h2>Cámara 2:</h1>
+        <select id="dropdown2">
+             <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM2&Value=1,57d45e73-42f0-4236-bfb5-7fb3edbbedb0">PLAZA</option>
+            <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM2&Value=1,fe5714fb-85d0-459b-a23a-258051d79d17">ESCUELA</option>
+            <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM2&Value=1,a5a53209-e52d-4b88-992d-a3cbaf49e8ca">MUNI</option>
+            <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM2&Value=1,6211ee91-2674-44bc-8b2e-36b6b8489404">CARTEL</option>
+        </select>
+
+        <h2>Cámara 3:</h1>
+        <select id="dropdown3">
+             <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM3&Value=1,57d45e73-42f0-4236-bfb5-7fb3edbbedb0">PLAZA</option>
+            <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM3&Value=1,fe5714fb-85d0-459b-a23a-258051d79d17">ESCUELA</option>
+            <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM3&Value=1,a5a53209-e52d-4b88-992d-a3cbaf49e8ca">MUNI</option>
+            <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM3&Value=1,6211ee91-2674-44bc-8b2e-36b6b8489404">CARTEL</option>
+        </select>
+
+        <h2>Cámara 4:</h1>
+        <select id="dropdown4">
+             <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM4&Value=1,57d45e73-42f0-4236-bfb5-7fb3edbbedb0">PLAZA</option>
+            <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM4&Value=1,fe5714fb-85d0-459b-a23a-258051d79d17">ESCUELA</option>
+            <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM4&Value=1,a5a53209-e52d-4b88-992d-a3cbaf49e8ca">MUNI</option>
+            <option value="http://45.232.167.1:8088/api/?Function=SetMultiViewOverlay&Input=CAM4&Value=1,6211ee91-2674-44bc-8b2e-36b6b8489404">CARTEL</option>
+        </select>
+
+        
+    </div>
+
+    <script>
+        // Function to make API call
+        function makeAPICall(apiUrl) {
+            fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                // Display the API response
+                document.getElementById('result').innerText = JSON.stringify(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').innerText = 'Error fetching data.';
+            });
+        }
+
+        // Add event listeners to dropdowns
+        document.getElementById('dropdown1').addEventListener('change', function() {
+            var selectedOption = this.value;
+            // Save the selected option to localStorage
+            localStorage.setItem('selectedOption1', selectedOption);
+            // Make API call based on selected option
+            makeAPICall(selectedOption);
+        });
+
+        document.getElementById('dropdown2').addEventListener('change', function() {
+            var selectedOption = this.value;
+            // Save the selected option to localStorage
+            localStorage.setItem('selectedOption2', selectedOption);
+            // Make API call based on selected option
+            makeAPICall(selectedOption);
+        });
+
+        document.getElementById('dropdown3').addEventListener('change', function() {
+            var selectedOption = this.value;
+            // Save the selected option to localStorage
+            localStorage.setItem('selectedOption3', selectedOption);
+            // Make API call based on selected option
+            makeAPICall(selectedOption);
+        });
+
+        document.getElementById('dropdown4').addEventListener('change', function() {
+            var selectedOption = this.value;
+            // Save the selected option to localStorage
+            localStorage.setItem('selectedOption4', selectedOption);
+            // Make API call based on selected option
+            makeAPICall(selectedOption);
+        });
+
+        // Retrieve the last selected options from localStorage when the page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            var lastSelectedOption1 = localStorage.getItem('selectedOption1');
+            if (lastSelectedOption1) {
+                document.getElementById('dropdown1').value = lastSelectedOption1;
+            }
+
+            var lastSelectedOption2 = localStorage.getItem('selectedOption2');
+            if (lastSelectedOption2) {
+                document.getElementById('dropdown2').value = lastSelectedOption2;
+            }
+
+            var lastSelectedOption3 = localStorage.getItem('selectedOption3');
+            if (lastSelectedOption3) {
+                document.getElementById('dropdown3').value = lastSelectedOption3;
+            }
+
+            var lastSelectedOption4 = localStorage.getItem('selectedOption4');
+            if (lastSelectedOption4) {
+                document.getElementById('dropdown4').value = lastSelectedOption4;
+            }
+        });
+    </script>
+</body>
+</html>
